@@ -54,7 +54,7 @@ document.addEventListener("keydown", (e) => {
     pressed = true;
   } else if (e.key == "a" || e.key == "d") {
     randomColor();
-    alert("No not hold");
+    alert("I told you not to hold");
   }
 });
 
