@@ -15,7 +15,7 @@ let pressed = false;
 randomColor();
 
 document.addEventListener("keydown", (e) => {
-  if (pressed == false) {
+  if (pressed == false && (e.key == "a" || e.key == "d")) {
     if (e.key == arrow) {
       colorBox.style.backgroundColor = "green";
       score++;
@@ -58,7 +58,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 document.addEventListener("keyup", (e) => {
-  randomColor();
+  if (e.key == "a" || e.key == "d") randomColor();
 });
 
 function randomColor() {
