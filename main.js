@@ -31,7 +31,7 @@ document.addEventListener("keydown", (e) => {
     if (sum > 0) {
       avg = (1 / (sum / times.length)) * 100000;
 
-      if (avg > topScore || topScore == 0) {
+      if ((avg > topScore || topScore == 0) && times.length >= 10) {
         topScore = avg;
       }
 
@@ -53,7 +53,7 @@ document.addEventListener("keydown", (e) => {
 
     if (times.length > 9) {
       document.getElementById("percent").innerText = "";
-    } else if(score > 1) {
+    } else if (score > 1) {
       document.getElementById("percent").innerText =
         ((score - 1) / 10) * 100 + "%";
     }
