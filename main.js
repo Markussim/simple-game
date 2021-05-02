@@ -53,7 +53,7 @@ document.addEventListener("keydown", (e) => {
 
     if (times.length > 9) {
       document.getElementById("percent").innerText = "";
-    } else {
+    } else if(score > 1) {
       document.getElementById("percent").innerText =
         ((score - 1) / 10) * 100 + "%";
     }
