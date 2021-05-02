@@ -36,11 +36,26 @@ document.addEventListener("keydown", (e) => {
       }
 
       console.log(topScore);
-      document.getElementById("score").innerText =
-        avg.toFixed(1) + " Highscore: " + parseInt(topScore).toFixed(1);
+
+      if (times.length > 9) {
+        document.getElementById("score").innerText =
+          avg.toFixed(1) + " Highscore: " + parseInt(topScore).toFixed(1);
+
+        document.getElementById("percent").innerText = "";
+      } else {
+        document.getElementById("percent").innerText = (score / 10) * 100 + "%";
+      }
     } else {
       document.getElementById("score").innerText =
         "Highscore: " + parseInt(topScore).toFixed(1);
+      document.getElementById("percent").innerText = 0 + "%";
+    }
+
+    if (times.length > 9) {
+      document.getElementById("percent").innerText = "";
+    } else {
+      document.getElementById("percent").innerText =
+        ((score - 1) / 10) * 100 + "%";
     }
 
     if (score > 1) {
