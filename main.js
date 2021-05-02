@@ -53,6 +53,7 @@ document.addEventListener("keydown", (e) => {
     t0 = performance.now();
     pressed = true;
   } else if (e.key == "a" || e.key == "d") {
+    randomColor();
     alert("No not hold");
   }
 });
