@@ -52,7 +52,7 @@ document.addEventListener("keydown", (e) => {
 
     t0 = performance.now();
     pressed = true;
-  } else {
+  } else if (e.key == "a" || e.key == "d") {
     alert("No not hold");
   }
 });
