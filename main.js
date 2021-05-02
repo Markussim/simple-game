@@ -67,7 +67,7 @@ function randomColor() {
     colorBox.style.backgroundColor = "blue";
     arrow = "d";
   } else {
-    colorBox.style.backgroundColor = "yellow";
+    colorBox.style.backgroundColor = "purple";
     arrow = "a";
   }
   pressed = false;
